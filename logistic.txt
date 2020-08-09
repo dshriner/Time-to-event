@@ -1,0 +1,12 @@
+#Daniel Shriner
+#January 12, 2017
+
+#intercept-only logistic model 
+model
+{
+  for (i in 1:N) {
+      y[i] ~ dbern(theta[i])
+      logit(theta[i]) <- alpha
+  }
+  alpha ~ dnorm(0.00000E+00, 1.00000E-06)
+}
